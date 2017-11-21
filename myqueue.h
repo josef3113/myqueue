@@ -12,10 +12,12 @@ public:
 	//Node* gethead();
 	//void sethead(Node*);
 	void add(Node*);
-	void printQ();
+	//void printQ();
 	Node* topNode();
 	Node* getNode();
 	bool isempty();
+	 
+	friend ostream& operator << (ostream &,const myqueue &);
 
 };
 

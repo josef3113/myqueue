@@ -23,15 +23,15 @@ myqueue::myqueue()
 //{
 //	head=newhead;
 //}
-void myqueue::printQ()
+ostream & operator << (ostream & output, const myqueue& toprint )
 {
-	if(head==NULL)
+	if(toprint.head==NULL)
 	{
 		cout<<"Q is empty"<<endl;
 	}
 	else
 	{
-		Node *temp=head;
+		Node *temp=toprint.head;
 		
 		while(temp->getnext()!=NULL)
 		{
@@ -40,6 +40,7 @@ void myqueue::printQ()
 		}
 		cout<<(*temp);
 	}
+	return output;
 }
 Node* myqueue::topNode()
 {

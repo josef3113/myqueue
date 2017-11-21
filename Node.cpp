@@ -63,7 +63,7 @@ char* Node::getname()const
 }
 ostream & operator << (ostream & out,const  Node &toprint)
 {
-	out << "nodename is:" << toprint.getname() << " sum is:" << toprint.getsum() <<" id is:"<<toprint.getid()<< endl;
+	out << "nodename is:" << toprint.name << " sum is:" << toprint.sum <<" id is:"<<toprint.idnode<< endl;
 	return out;
 }
 //ostream&  operator << (ostream &output,const Node &A)

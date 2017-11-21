@@ -17,12 +17,12 @@ void main()
 	newQ.add(&einav);
 	newQ.add(&david);
 	newQ.add(&yosi);
-	newQ.printQ();
+	cout<<newQ;
 	cout<<newQ.isempty()<<endl;
 	//printNode(*(newQ.getNode()));
 	newQ.topNode();
 	cout<<"after top"<<endl;
-	newQ.printQ();
+	cout<<newQ;
 	cout<<"from out"<<endl;
 	printoutQ(newQ);
 	newQ.getNode();
@@ -30,7 +30,7 @@ void main()
 	newQ.getNode();
 	newQ.getNode();
 	cout<<"after get"<<endl;
-	newQ.printQ();
+	cout<<newQ;
 
 	//david.setnext(&einav);
 
