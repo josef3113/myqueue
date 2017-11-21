@@ -43,7 +43,7 @@ Node* Node::getnext()
 {
 	return next;
 }
-int Node::getsum()
+int Node::getsum()const
 {
 	return sum;
 }
@@ -53,10 +53,23 @@ void Node::setsum(int x)
 	sum = x;
 }
 
-
-void printNode(Node &toprint)
+int Node::getid()const
 {
-	cout << "nodename is:" << toprint.name << " sum is:" << toprint.sum <<" id is:"<<toprint.idnode<< endl;
+   return idnode;
 }
+char* Node::getname()const
+{
+	return name;
+}
+ostream & operator << (ostream & out,const  Node &toprint)
+{
+	out << "nodename is:" << toprint.getname() << " sum is:" << toprint.getsum() <<" id is:"<<toprint.getid()<< endl;
+	return out;
+}
+//ostream&  operator << (ostream &output,const Node &A)
+//{
+//	output<<"name is:"<<A.name<<"sum is:"<<A.sum<<"id is:"<<A.idnode<<endl;
+//	return output;
+//}
 
 #endif

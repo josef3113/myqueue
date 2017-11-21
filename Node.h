@@ -1,6 +1,8 @@
 #ifndef Node_H
 #define Node_H
 
+#include<iostream>
+
 using namespace std;
 
 class Node
@@ -16,16 +18,24 @@ public:
 	Node();
 	Node& setname(char*);
 	void setnext(Node*);
-	Node *getnext();
-	int getsum();
 	void setsum(int);
-
-	friend void printNode(Node &);
 	
+	Node *getnext();
+	
+	int getsum()const;
+	int getid()const;
+	char* getname()const;
+
+	
+	//void printNode(Node &);
+
+
+	//friend void printNode(Node &);
+	friend ostream & operator <<(ostream& ,const Node &);
 
 };
 
-void printNode(Node &);
+
 
 
 

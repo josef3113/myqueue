@@ -35,10 +35,10 @@ void myqueue::printQ()
 		
 		while(temp->getnext()!=NULL)
 		{
-			printNode(*temp);
+			cout<<(*temp);
 			temp=temp->getnext();
 		}
-		printNode(*temp);
+		cout<<(*temp);
 	}
 }
 Node* myqueue::topNode()
@@ -103,9 +103,9 @@ void printoutQ(myqueue toprint)
 		
 		while(temp->getnext()!=NULL)
 		{
-			printNode(*temp);
+			cout<<(*temp);
 			temp=temp->getnext();
 		}
-		printNode(*temp);
+		cout<<(*temp);
 	}
 }
